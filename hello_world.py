@@ -9,3 +9,8 @@ print("""
 |  |  ||     ||     ||     ||     |        \      / |     ||  .  \|     ||     ||  |
 |__|__||_____||_____||_____| \___/          \_/\_/   \___/ |__|\_||_____||_____||__|
 """)
+print('-' * 85)
+
+#Formatação de string dentro de uma mensagem utilizando Chaves
+nome = input('Olá, qual seu nome? ')
+print('Seja bem vindo, {}'.format(nome))
