@@ -12,11 +12,12 @@ print("""
 print('-' * 85)
 
 #Formatação de string dentro de uma mensagem utilizando Chaves
-nome = input('Olá, digite o que vier à mente: ')
+nome = input('\nOlá, digite o que vier à mente: ')
 #print('Seja bem vindo, {}'.format(nome))
 
 #Informações possíveis sobre a digitação
-print('Algumas informações técnicas sobre a frase:')
+frase = (" Algumas informações técnicas sobre a frase ")
+print('\n{:=^85}\n'.format(frase))
 print('O tipo primitivo digitado é: ', type(nome))
 print('Contém somente espaços? ', nome.isspace())
 print('É um número? ', nome.isnumeric())
