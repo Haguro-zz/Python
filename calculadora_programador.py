@@ -50,7 +50,7 @@ elif opcao == 2:
     resultadoHex = ''.join(reversed(valorHex)) # Inverte a ordem da string, para apresentar o resultado corretamente
     print('\nO número decimal \033[1;33m{}\033[m equivale a \033[1;35m{}\033[m em hexadecimal!'.format(valorInicial, resultadoHex))
 
-if opcao == 3:
+elif opcao == 3:
     valorDecimal = int(input('\nDigite o valor decimal a ser convertido: '))
     valorInicial = valorDecimal
     valorOctal = []
