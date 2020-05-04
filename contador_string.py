@@ -4,12 +4,12 @@
 
 texto = input('Digite um texto qualquer: ').strip()
 
-print(texto.upper()) #O texto com todas as letras maiúsculas
-print(texto.lower()) #O texto com todas as letras minúsculas
+print('\033[7m', texto.upper(), '\033[m') #O texto com todas as letras maiúsculas
+print('\033[7m', texto.lower(), '\033[m') #O texto com todas as letras minúsculas
 
 splitTexto = texto.split()
 joinTexto = ''.join(splitTexto)
 
-print('A frase possui {} letras!'.format(len(joinTexto))) #A quantidade de caracteres, exceto os espaços
-print('A primeira palavra da frase, possui {} caracteres!'.format(len(splitTexto[0]))) #A quantidade de caracteres da primeira palavra
-print('A última palavra do texto é: ', splitTexto[len(splitTexto)-1]) #A última palavra contida no texto
+print('A frase possui {}{}{} letras!'.format('\033[1;33m', len(joinTexto), '\033[m')) #A quantidade de caracteres, exceto os espaços
+print('A primeira palavra da frase, possui {}{}{} caracteres!'.format('\033[1;36m', len(splitTexto[0]), '\033[m')) #A quantidade de caracteres da primeira palavra
+print('A última palavra do texto é: \033[1;31m', splitTexto[len(splitTexto)-1]) #A última palavra contida no texto

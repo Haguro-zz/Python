@@ -1,6 +1,19 @@
 #!/usr/bin/python3
 
-print("""
+'''Esquema de cores ANSI - \033[STYLE;TEXT;BACKm
+
+STYLE           TEXT                BACK
+0 - normal      30 -     branco   - 40
+1 - negrito     31 -    vermelho  - 41
+4 - sublinhado  32 -     verde    - 42
+7 - inverter    33 -    amarelo   - 43
+                34 -     azul     - 44
+                35 -     roxo     - 45
+                36 -  azul claro  - 46
+                37 -    cinza     - 47
+'''
+
+print("""\033[1;35m
  __ __    ___  _      _       ___          __    __   ___   ____   _      ___    __ 
 |  |  |  /  _]| |    | |     /   \        |  |__|  | /   \ |    \ | |    |   \  |  |
 |  |  | /  [_ | |    | |    |     | _____ |  |  |  ||     ||  D  )| |    |    \ |  |
@@ -8,7 +21,7 @@ print("""
 |  |  ||   [_ |     ||     ||     ||_____||  `  '  ||     ||    \ |     ||     | __ 
 |  |  ||     ||     ||     ||     |        \      / |     ||  .  \|     ||     ||  |
 |__|__||_____||_____||_____| \___/          \_/\_/   \___/ |__|\_||_____||_____||__|
-""")
+\033[m""")
 print('-' * 85)
 
 #Formatação de string dentro de uma mensagem utilizando Chaves
@@ -18,8 +31,8 @@ capitalizado = nome.title()
 primeiroNome = capitalizado.split() #Divide o texto em uma lista, separando cada palavra, identificada pelo espaço.
 nomeCompleto = ' '.join(primeiroNome) #Junta as palavras novamente, adicionando espaços entre as palavras separadas pelo split().
 
-print('Seja bem vindo, {}'.format(primeiroNome[0]))
-print('Seu nome completo é', nomeCompleto)
+print('Seja bem vindo, {}{}{}'.format('\033[0;34m', primeiroNome[0], '\033[m'))
+print('Seu nome completo é\033[1;36m', nomeCompleto)
 
 #Informações possíveis sobre a digitação
 #print('Algumas informações técnicas sobre a frase:')
