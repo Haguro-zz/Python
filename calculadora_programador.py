@@ -23,9 +23,9 @@ if opcao == 1:
 elif opcao == 2:
     valorDecimal = int(input('\nDigite o valor decimal a ser convertido: '))
     valorInicial = valorDecimal
-    valorHex = []
+    valorHex = [] # Inicia a lista para inserir os valores obtidos dos restos
     while valorDecimal >= 1:
-        valorHex.append(str(valorDecimal % 16))
+        valorHex.append(str(valorDecimal % 16)) # Calcula o resto, que entrará na lista, resultando no hexadecimal
         valorDecimal = valorDecimal // 16
 
     if '10' in valorHex:
@@ -47,8 +47,18 @@ elif opcao == 2:
         i = valorHex.index('15')
         valorHex[i] = 'F'
 
-    resultadoHex = ''.join(reversed(valorHex))
+    resultadoHex = ''.join(reversed(valorHex)) # Inverte a ordem da string, para apresentar o resultado corretamente
     print('\nO número decimal \033[1;33m{}\033[m equivale a \033[1;35m{}\033[m em hexadecimal!'.format(valorInicial, resultadoHex))
+
+if opcao == 3:
+    valorDecimal = int(input('\nDigite o valor decimal a ser convertido: '))
+    valorInicial = valorDecimal
+    valorOctal = []
+    while valorDecimal >= 1:
+        valorOctal.append(str(valorDecimal % 8))
+        valorDecimal = valorDecimal // 8
+    resultadoOctal = ''.join(reversed(valorOctal))
+    print('\nO número decimal \033[1;33m{}\033[m equivale a \033[1;35m{}\033[m em octal!'.format(valorInicial, resultadoOctal))
 
 else:
     print('\033[1;31m\nOpção inválida!\033[m')
