@@ -22,12 +22,12 @@ print('\033[1,31mOlá Mundo!\033[m
 
 **Laço - FOR**
 
-for c in (INÍCIO, FIM, SALTOS):
+for c in range(INÍCIO, FIM, SALTOS):
 	execução
 
 Exemplo:
 ```	
-for c in (10, 0, -1)
+for c in range(10, 0, -1)
 	print(c)
 	
 O programa irá imprimir os números de 10 à 0, contando sempre -1.
