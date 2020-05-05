@@ -1,7 +1,7 @@
 # TESTES E TEORIAS EM PYTHON
 
 ------------------------
-**Esquema de cores ANSI - \033[STYLE;TEXT;BACKm
+**Esquema de cores ANSI - \033[STYLE;TEXT;BACKm**
 
 |STYLE          | TEXT |            | BACK 
 |:--------------|:-----|:----------:|-----:
@@ -14,20 +14,24 @@
 |               | 36   | azul claro | 46  
 |               | 37   |   cinza    | 47  
 
+Exemplo:
+```
+print('\033[1,31mOlá Mundo!\033[m
+```
 ------------------------
 
-**Laço - FOR
+**Laço - FOR**
 
 for c in (INÍCIO, FIM, SALTOS):
 	execução
 
 Exemplo:
-'''	
+```	
 for c in (10, 0, -1)
 	print(c)
 	
-# O programa irá imprimir os números de 10 à 0, contando sempre -1.
-'''	
+O programa irá imprimir os números de 10 à 0, contando sempre -1.
+```	
 ------------------------
 
 
