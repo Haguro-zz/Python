@@ -9,7 +9,7 @@ print("""\033[1;1m1) Base Binária
 2) Base Hexadecimal
 3) Base octal\n\033[m""")
 opcao = int(input('Digite a opção de conversão: '))
-
+'''
 if opcao == 1:
     valorDecimal = int(input('\nDigite o valor decimal a ser convertido: '))
     valorInicial = valorDecimal
@@ -63,5 +63,22 @@ elif opcao == 3:
 else:
     print('\033[1;31m\nOpção inválida!\033[m')
     print('*' * 20)
+'''
+if opcao == 1:
+    valorDecimal = int(input('\nDigite o valor decimal a ser convertido: '))
+    valorBinario = bin(valorDecimal)
+    print('\nO número decimal \033[1;33m{}\033[m equivale a \033[1;35m{}\033[m em binário!'.format(valorDecimal, valorBinario))
 
+elif opcao == 2:
+    valorDecimal = int(input('\nDigite o valor decimal a ser convertido: '))
+    valorHexadecimal = hex(valorDecimal)
+    print('\nO número decimal \033[1;33m{}\033[m equivale a \033[1;35m{}\033[m em hexadecimal!'.format(valorDecimal, valorHexadecimal))
 
+elif opcao == 3:
+    valorDecimal = int(input('\nDigite o valor decimal a ser convertido: '))
+    valorOctal = oct(valorDecimal)
+    print('\nO número decimal \033[1;33m{}\033[m equivale a \033[1;35m{}\033[m em octal!'.format(valorDecimal, valorOctal))
+
+else:
+    print('\033[1;31m\nOpção inválida!\033[m')
+    print('*' * 20)
