@@ -9,7 +9,9 @@ print("""\033[1;1m1) Base Binária
 2) Base Hexadecimal
 3) Base octal\n\033[m""")
 opcao = int(input('Digite a opção de conversão: '))
-'''
+
+'''# Método manual
+
 if opcao == 1:
     valorDecimal = int(input('\nDigite o valor decimal a ser convertido: '))
     valorInicial = valorDecimal
