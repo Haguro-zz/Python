@@ -15,23 +15,31 @@ print(f'''\033[1;{corLetra}m
 ██  ██  ██ ██      ██  ██ ██ ██    ██ 
 ██      ██ ███████ ██   ████  ██████ \033[m''')
 
-print('''
+
+menu = ('''
 1) Contagem Regressiva
 2) Poema
 3) Data
 0) Sair
 ''')
 
-opcao = int(input('Digite a opção desejada: '))
+print(menu)
+
+
 data = datetime.datetime.now()
 
 while True:
+    
+    opcao = input('Digite a opção desejada ('m' para ver o menu): ')
+    
+    if opcao in 'Mm':
+        print(menu)
+    
     if opcao == 1:
         for c in range(10, 0, -1):
             print(c)
             sleep(0.1)  # Timer para execução do laço
         print('\033[1;31m\nACABOU!!!\033[m')
-        break
 
     elif opcao == 2:
         print('''\033[1m
@@ -48,11 +56,9 @@ while True:
         the fashion of a stone
 
         underground.\033[m''')
-        break
 
     elif opcao == 3:
         print(data)
-        break
 
     elif opcao == 0:
         break
