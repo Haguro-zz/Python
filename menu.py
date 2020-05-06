@@ -68,8 +68,4 @@ while True:
         print('*' * 20)
         opcao = int(input('Digite a opção desejada: '))
 
-'''novaOpcao = str(input('Deseja retornar ao menu? [S/N] '))
-if novaOpcao in 'sS':
-    return '''
-
 print('\nAté logo!')
