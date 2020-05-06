@@ -7,6 +7,7 @@ import random
 # Estrutura de menu
 
 corLetra = random.randrange(30,37)
+texto = 'Bem-vindo(a)'
 
 print(f'''\033[1;{corLetra}m
 ███    ███ ███████ ███    ██ ██    ██ 
@@ -15,6 +16,7 @@ print(f'''\033[1;{corLetra}m
 ██  ██  ██ ██      ██  ██ ██ ██    ██ 
 ██      ██ ███████ ██   ████  ██████ \033[m''')
 
+print(f'\n{texto:=^35}')
 
 menu = ('''
 1) Contagem Regressiva
@@ -25,17 +27,16 @@ menu = ('''
 
 print(menu)
 
-
 data = datetime.datetime.now()
 
 while True:
     
-    opcao = input('Digite a opção desejada ('m' para ver o menu): ')
+    opcao = int(input('Digite a opção desejada (`10` para ver o menu): '))
     
-    if opcao in 'Mm':
+    if opcao == 10:
         print(menu)
     
-    if opcao == 1:
+    elif opcao == 1:
         for c in range(10, 0, -1):
             print(c)
             sleep(0.1)  # Timer para execução do laço
