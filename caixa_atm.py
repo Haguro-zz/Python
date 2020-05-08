@@ -1,10 +1,7 @@
 '''Programa que simula o funcionamento de um caixa eletrônico
-
 Lê o valor de saque (int) e informa quantas cédulas e de quais valores
 serão emitidas.
-
 Cédulas possíveis: R$50, R$20, R$10 e R$1.
-
 '''
 
 import random
@@ -21,10 +18,10 @@ print(f'''\033[1;{corLetra}m
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\033[m
 ''')
 
-
+resp = ''
 
 while True:
-    valor = int(input('Digite o valor que deseja sacar: R$'))
+    valor = int(input('\nDigite o valor que deseja sacar: R$ '))
 
     if valor == 0:
         print('Não se pode sacar R$0,00. Tente outro valor.')
@@ -54,5 +51,17 @@ while True:
 
                 if total == 0:
                     break
-        print('\nObrigado, volte sempre!')
-        break
+
+# Opção de reiniciar o programa:
+
+        resp = str(input('\nDeseja sacar mais algum valor? [S/N] ').strip().upper()[0]) # Recebe o parâmetro opcional.
+
+        while resp not in 'SN': # Abre o loop para verificação do parâmetro, caso não esteja entre S e N.
+            resp = str(input('\nDeseja sacar mais algum valor? [S/N] ').strip().upper()[0])
+
+            if resp == 'N':
+                print('\nObrigado, volte sempre!')
+                break
+
+        if resp == 'N':
+            break
