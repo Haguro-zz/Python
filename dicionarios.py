@@ -18,9 +18,8 @@ for j in range(0,quantJogador):
     jogadores['nome'] = (str(input('Digite o nome do jogador: ')))
     jogadores['dado'] = randrange(1,7,1, int)
     listaJogador.append(jogadores.copy())
-    jogadores.clear()
 
 for c in listaJogador:
     for v in c.values():
-        print(f'{c["nome"]} tirou ', end=' ')
-        print(c['dado'])
+        print(f'{c["nome"]} tirou {c["dado"]}!')
+        break
