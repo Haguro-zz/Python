@@ -3,23 +3,6 @@
 import socket
 import requests
 
-# Cliente Socket
-def client_sock(host, port):
-
-    # Criando um cliente IPv4 - TCP
-    cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-    # Iniciando a conexão
-    cliente.connect((host, port))
-
-    # Enviando uma mensagem de solicitação de página index.html ao host
-    mensagem = (f'GET /index.html HTTP/1.1\r\nHost: {host}:{port}\r\n\r\n')
-    cliente.send(mensagem.encode('ascii')) # Converte a mensagem em Bytes
-
-    # Recebendo a resposta com buffer = 4096
-    resposta = cliente.recv(4096)
-    print(resposta)
-
 # Servidor Socket
 def server_sock():
 
@@ -43,4 +26,3 @@ def server_sock():
         msg = 'Conectado'
         client.send(msg.encode('ascii'))
         client.close() # Encerra a conexão
-

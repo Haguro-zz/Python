@@ -6,7 +6,7 @@ import random
 # Estrutura de menu
 def menu():
     corLetra = random.randrange(30, 37)
-    texto = ' By: Hagur0 '
+    author = ' By: Hagur0 '
 
     print(f'''\033[1;{corLetra}m
     ╔═╗┌─┐┌┐┌┌┬┐┌─┐┌─┐┌┬┐  ╔╦╗┌─┐┌─┐┬  ┌─┐
@@ -14,11 +14,10 @@ def menu():
     ╩  └─┘┘└┘ ┴ └─┘└─┘ ┴    ╩ └─┘└─┘┴─┘└─┘
     \033[m''')
 
-    print(f'\n{texto:=^35}')
+    print(f'\n{author:=^45}')
 
     menu = ('''
-        1) Socket Cliente
-        2) Socket Servidor
+        1) Socket Server (Listening Mode)
         0) Sair
         ''')
 
@@ -26,27 +25,21 @@ def menu():
 
     while True:
 
-        opcao = int(input('Digite a opção desejada (`999` para ver o menu): '))
+        opcao = input('Digite a opção desejada ("M" para ver o menu): ')
 
-        if opcao == 999:
+        if opcao in 'mM':
             print(menu)
 
-        elif opcao == 1:
-            host = input('Digite o host: ')
-            port = int(input('Digite o número da porta: '))
-
-            modules.client_sock(host, port)
-
-        elif opcao == 2:
+        elif opcao == '1':
             modules.server_sock()
 
-        elif opcao == 0:
+        elif opcao == '0':
             break
 
         else:
             print('\033[1;31m\nOpção inválida!\033[m\n')
             print('*' * 20)
-            opcao = int(input('\nDigite a opção desejada: '))
+            print('\n')
 
     print('\nAté logo!')
 
