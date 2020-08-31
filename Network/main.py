@@ -2,6 +2,7 @@
 
 import modules
 import random
+import socket
 
 # Estrutura de menu
 def menu():
@@ -18,6 +19,7 @@ def menu():
 
     menu = ('''
         1) Socket Server (Listening Mode)
+        2) Port Scanner
         0) Sair
         ''')
 
@@ -33,6 +35,16 @@ def menu():
         elif opcao == '1':
             modules.server_sock()
 
+        elif opcao == '2':
+
+            print('\n')
+            #Recebendo os dados do alvo
+            host = input('[*] Digite o Host alvo: ')
+            port = str(input('[*] Digite as portas a serem consultadas (separadas por ","): ')).split(',')
+
+            #Encaminhando os dados para o módulo
+            modules.portscanner(host, port)
+
         elif opcao == '0':
             break
 
@@ -44,5 +56,8 @@ def menu():
     print('\nAté logo!')
 
 # Programa Principal
-
-menu()
+try:
+    menu()
+except KeyboardInterrupt:
+    print('\n\n', '*' * 20)
+    print('\n Programa Encerrado!')
