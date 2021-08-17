@@ -41,7 +41,7 @@ def menu():
             for c in range(10, 0, -1):
                 print(c)
                 sleep(0.1)  # Timer para execução do laço
-            print('\033[1;31m\nACABOU!!!\033[m')
+            print('\033[1;31m\nACABOU!!!\033[m\n')
 
         elif opcao == 2:
             print('''\033[1m
@@ -57,7 +57,7 @@ def menu():
             agreement,
             the fashion of a stone
     
-            underground.\033[m''')
+            underground.\033[m\n''')
 
         elif opcao == 3:
             print(data)
@@ -66,7 +66,7 @@ def menu():
             break
 
         else:
-            print('\033[1;31m\nOpção inválida!\033[m')
+            print('\033[1;31m\nOpção inválida!\033[m\n')
             print('*' * 20)
             opcao = int(input('Digite a opção desejada: '))
 
