@@ -6,7 +6,7 @@
 
 #1)
 
-from random import randrange
+import random
 from time import sleep
 
 def dados(quantJogador):
@@ -22,7 +22,7 @@ def dados(quantJogador):
     print(f'\033[2;33m \n{" 🎲 ":_^25} \033[m\n')
     for j in range(0,quantJogador):
         jogadores['nome'] = (str(input('Digite o nome do jogador: ')).capitalize())
-        jogadores['dado'] = randrange(1,7,1, int)
+        jogadores['dado'] = random.randint(1,6) #randrange(1,7,1, int)
         listaJogador.append(jogadores.copy()) # Adiciona os valores recebidos no dicionário à lista
     print('')
     for c in listaJogador:
